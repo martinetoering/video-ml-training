@@ -1,5 +1,8 @@
 # Video Classification Training on K400-Tiny
 
+*Author: Martine Toering*
+![Status](https://img.shields.io/static/v1.svg?label=Status&message=Finished&color=green)
+
 This repository serves as an example training pipeline for ML projects. It implements the computer vision task of **video classification training** with `pytorch`, `torchvision` and `pytorchvideo`.
 
 The following components are included:
@@ -14,10 +17,9 @@ For demo purposes, we will be using a very tiny subselection of the [Kinetics-40
 
 Prerequisites are the tiny subset of the K400 images `example_data/k400tiny_images` and the `example_data/k400tiny_ground_truth.csv` file with the ground truth.
 
-Some examples from the Kinetics-400 Dataset are shown below.
-
 <p align="center">
     <img src='img/examples.png' width='800'>
+    <sup>Some examples from the Kinetics-400 Dataset</sup>
 </p>
 
 ## Setup

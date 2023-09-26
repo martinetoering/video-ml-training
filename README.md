@@ -68,16 +68,23 @@ To set up distributed training on multiple GPUs or multiple nodes, please take a
 #### Running on one node
 
 If you want to run on one node with 4 GPUs, you have to use:
-`python run_distributed.py --num_nodes 1 --num_gpus_node 4 --node_rank 0 --hostname example-machine`
+
+```bash
+python run_distributed.py --num_nodes 1 --num_gpus_node 4 --node_rank 0 --hostname example-machine
+```
 
 #### Running on multiple nodes
 
 For running 2 nodes with each 4 GPUs it will be along the following lines; one node needs to set this:
 
-`python run_distributed.py --num_nodes 2 --num_gpus_node 4 --node_rank 0 --hostname example-machine-1`
+```bash
+python run_distributed.py --num_nodes 2 --num_gpus_node 4 --node_rank 0 --hostname example-machine-1
+```
 
 and the other node uses this:
-`python run_distributed.py --num_nodes 2 --num_gpus_node 4 --node_rank 1 --hostname example-machine-2`
+```bash
+python run_distributed.py --num_nodes 2 --num_gpus_node 4 --node_rank 1 --hostname example-machine-2
+```
 
 ### Validation
 
@@ -93,15 +100,21 @@ At the end of training, the best model will automatically be exported to onnx fo
 
 Additionally, it is also possible to save onnx versions directly (e.g. without training). For example, to export a pretrained model, run the following:
 
-`python run_training.py --weights R2Plus1D_18_Weights.KINETICS400_V1 --export_only`
+```bash
+python run_training.py --weights R2Plus1D_18_Weights.KINETICS400_V1 --export_only
+```
 
 To export a previously trained model, run the following:
 
-`python run_training.py --load_model <path_to_model_to_resume> --export_only`
+```bash
+python run_training.py --load_model <path_to_model_to_resume> --export_only
+```
 
 To export the best model stored locally, run:
 
-`python run_training.py --export_only`
+```bash
+python run_training.py --export_only`
+```
 
 ## Implementation details
 
@@ -127,7 +140,7 @@ For configuration of hyperparameters and other settings, `argparse` is used. Ano
 
 See below for the help section of the arguments (`python run_training.py --help`).
 
-```
+```bash
 Video Classification Training on K400-Tiny
 
 options:

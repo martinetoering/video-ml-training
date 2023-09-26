@@ -176,14 +176,14 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--gt_csv",
-        default="../../data/k400tiny_groundtruth.csv",
+        default="../example_data/k400tiny_groundtruth.csv",
         type=str,
         help="path to ground truth csv file",
     )
 
     parser.add_argument(
         "--root_dir",
-        default="../../data/k400tiny_images",
+        default="../example_data/k400tiny_images",
         type=str,
         help="path to images directory",
     )

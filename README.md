@@ -43,6 +43,7 @@ Go to the directory `util_scripts` and run the python script `make_datasplit.py`
 ```bash
 cd util_scripts
 python make_datasplit.py
+cd ..
 ```
 
 Use the arguments `--gt_csv <PATH_TO_GT_CSV>` and `--root_dir <PATH_TO_IMAGE_DIR>` to give in different paths to the ground truth csv file and the image directory.

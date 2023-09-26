@@ -1,6 +1,7 @@
 # Video Classification Training on K400-Tiny
 
 *Author: Martine Toering*
+
 ![Status](https://img.shields.io/static/v1.svg?label=Status&message=Finished&color=green)
 
 This repository serves as an example training pipeline for ML projects. It implements the computer vision task of **video classification training** with `pytorch`, `torchvision` and `pytorchvideo`.

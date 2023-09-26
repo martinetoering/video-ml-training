@@ -1,6 +1,6 @@
 # Video Classification Training on K400-Tiny
 
-This repository serves as an example training pipeline for ML projects. It implements the computer vision task of **video classification training** with `pytorch`, `torchvision` and `pytorchvideo`. 
+This repository serves as an example training pipeline for ML projects. It implements the computer vision task of **video classification training** with `pytorch`, `torchvision` and `pytorchvideo`.
 
 The following components are included:
 - Data preparation and data splitting
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 The `pyproject.toml` file contains the environment with the packages used in this project. To install these packages you can for instance use:
 
 ```bash
-poetry install --without dev  
+poetry install --without dev
 ```
 
 ### Data preparation
@@ -65,7 +65,7 @@ python run_training.py
 
 To set up distributed training on multiple GPUs or multiple nodes, please take a look at `run_distributed.py` and the arguments related to distributed training at the bottom. `run_distributed.py` sets up the distributed training based on these arguments `num_nodes` (total number of nodes), `num_gpus_node` (number of GPUs per node), `node_rank` (rank of the current node), etc.
 
-#### Running on one node 
+#### Running on one node
 
 If you want to run on one node with 4 GPUs, you have to use:
 `python run_distributed.py --num_nodes 1 --num_gpus_node 4 --node_rank 0 --hostname example-machine`

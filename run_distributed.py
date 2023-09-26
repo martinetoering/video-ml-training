@@ -1,5 +1,4 @@
 import argparse
-import os
 
 import torch
 from args import get_training_args
@@ -40,35 +39,43 @@ def run_distributed(local_rank: int, args: argparse.Namespace):
 if __name__ == "__main__":
     parser = get_training_args()
     parser.add_argument(
-        '--num_nodes', 
-        default=1, 
-        type=int, 
-        help='total number of nodes')
+        "--num_nodes",
+        default=1,
+        type=int,
+        help="total number of nodes",
+    )
 
     parser.add_argument(
-        '--num_gpus_node',
-        default=1, 
-        type=int, 
-        help='number of gpus per node')
+        "--num_gpus_node",
+        default=1,
+        type=int,
+        help="number of gpus per node",
+    )
 
     parser.add_argument(
-        '--node_rank', 
-        default=0, 
-        type=int, 
-        help='number of the node used')
+        "--node_rank",
+        default=0,
+        type=int,
+        help="number of the node used",
+    )
 
     parser.add_argument(
-        '--hostname', 
-        default="example-machine", 
-        type=str, 
-        help='local host name for distributed training')
+        "--hostname",
+        default="example-machine",
+        type=str,
+        help="local host name for distributed training",
+    )
 
     parser.add_argument(
-        '--port_id', 
-        default=23400, 
-        type=int, 
-        help='port id for distributed training')
-        
+        "--port_id",
+        default=23400,
+        type=int,
+        help="port id for distributed training",
+    )
+
     args = parser.parse_args()
-    torch.multiprocessing.spawn(run_distributed, nprocs=args.num_gpus_node, args=(args,))
-
+    torch.multiprocessing.spawn(
+        run_distributed,
+        nprocs=args.num_gpus_node,
+        args=(args,),
+    )

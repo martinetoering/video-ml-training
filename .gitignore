@@ -3,7 +3,7 @@ k400tiny
 
 # Model checkpoints and exports
 checkpoints
-onnx_export
+model_onnx
 
 # Mlflow runs
 mlruns

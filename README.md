@@ -208,4 +208,6 @@ We have put our dataset code into a folder `datasets` and our data augmentation 
 - Sync batch norm is also often used in combination with distributed training. *Batch norm* is a layer often used before non-linear layers; it normalizes with batch statistics and rescales by learned hyperparameters gamma and beta, which helps to stabilize and speed up training. *Sync batch norm* is a method to not only have batch norm on a single GPU but to apply batch norm on the whole mini-batch in the case of distributed training.
 - Mixed precision. Using mixed precision means making training more efficient by also using lower precision data types, such as using torch.float16 alongside torch.float32. Automatic mixed precision package `torch.cuda.amp` could perform mixed precision.
 
-Author: Martine Toering
+### See also
+
+- [Video Classification Deployment FastAPI Kubernetes](https://github.com/martinetoering/ml-demo-fastapi-k8s)
